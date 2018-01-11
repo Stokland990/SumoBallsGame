@@ -52,6 +52,7 @@ ABallPlayer::ABallPlayer()
 	ForceHit->Radius = 200;
 	ForceHit->SetVisibility(true);
 	ForceHit->AddObjectTypeToAffect(EObjectTypeQuery::ObjectTypeQuery_MAX);
+	ForceHit->bAbsoluteRotation = true;
 
 	///Set up forces
 	RollTorque = 40000000.0f;

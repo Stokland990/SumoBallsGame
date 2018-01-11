@@ -14,13 +14,13 @@ ASwirl::ASwirl()
 
 	DeathBox = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
 	RootComponent = DeathBox;
-	DeathBox->InitBoxExtent(FVector(20));
+	DeathBox->InitBoxExtent(FVector(30));
 	DeathBox->SetWorldScale3D(FVector(1.5));
 
 	MagnetForce = CreateDefaultSubobject<URadialForceComponent>(FName("Magnet Force"));
 	MagnetForce->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
 	MagnetForce->Radius = 800.f;
-	MagnetForce->ImpulseStrength = -55000;
+	MagnetForce->ImpulseStrength = -65000;
 	MagnetForce->AddObjectTypeToAffect(EObjectTypeQuery::ObjectTypeQuery_MAX);
 
 	SwirlEffect = CreateDefaultSubobject<UParticleSystemComponent>(FName("Swirl Effect"));

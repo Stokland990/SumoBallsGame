@@ -22,7 +22,7 @@ ABallPlayer::ABallPlayer()
 	/// Create mesh component for the ball
 	Ball = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PlayerMesh"));
 	Ball->SetStaticMesh(BallMesh.Object);
-	Ball->SetWorldScale3D(FVector(1.3));
+	Ball->SetWorldScale3D(FVector(1.4));
 	Ball->SetSimulatePhysics(true);
 	Ball->SetAngularDamping(1.f);
 	Ball->SetLinearDamping(0.4);
